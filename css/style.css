@@ -1,3 +1,4 @@
+/* Your existing CSS remains unchanged except for the work-experience section */
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +11,7 @@
 
 :root {
     --bg-color: #2a2a2a;
-    --second-color: #202020;
+    --second-bg-color: #202020;
     --text-color: #fff;
     --second-color: #ccc;
     --main-color: #08ceec;
@@ -576,7 +577,7 @@ header.sticky {
     color: var(--main-color);
 }
 
-/* Work Experience Section */
+/* Updated Work Experience Section with Circular Logo Animation */
 .work-experience {
     padding: 160px 16.5% 120px;
     background: var(--second-bg-color);
@@ -657,6 +658,28 @@ header.sticky {
     margin-bottom: 8px;
 }
 
+.company-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    animation: logoSpin 12s linear infinite;
+    transition: all 0.45s ease;
+    border: 2px solid var(--main-color);
+}
+
+
+
+@keyframes logoSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Responsive Design for Work Experience */
 @media (max-width: 920px) {
     .work-experience {
@@ -665,10 +688,9 @@ header.sticky {
     .experience-content {
         grid-template-columns: 1fr;
     }
-
-.company-logo {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 10px;
-}
+    .company-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
 }
